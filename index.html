@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#101a24">
+  <title>Neon Run — Pocket Racer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Run home"><span class="brand-mark">N</span><span>NEON<span class="brand-light"> RUN</span></span></a>
+      <div class="best-score">BEST <strong id="bestScore">000000</strong></div>
+    </header>
+
+    <section class="game-card" aria-label="Racing game">
+      <div class="hud" aria-live="polite">
+        <div class="hud-stat"><span class="hud-label">DISTANCE</span><strong id="score">000000</strong></div>
+        <div class="speedometer"><span id="speed">0</span><small>KM/H</small></div>
+        <div class="hud-stat hud-right"><span class="hud-label">LEVEL</span><strong id="level">01</strong></div>
+      </div>
+
+      <div class="road-frame">
+        <canvas id="gameCanvas" aria-label="Top-down racing track" role="img"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-panel">
+            <span class="eyebrow" id="overlayEyebrow">READY, DRIVER?</span>
+            <h1 id="overlayTitle">OWN THE<br><span>OPEN ROAD.</span></h1>
+            <p id="overlayText">Dodge traffic. Find your rhythm.<br>How far can you go?</p>
+            <button class="primary-button" id="startButton" type="button"><span>START RACE</span><span class="button-arrow">↗</span></button>
+            <div class="keyboard-hint">USE <kbd>←</kbd> <kbd>→</kbd> OR <kbd>A</kbd> <kbd>D</kbd> TO STEER</div>
+          </div>
+        </div>
+        <div class="countdown" id="countdown" aria-hidden="true"></div>
+        <div class="toast" id="toast" aria-live="polite"></div>
+      </div>
+
+      <div class="game-controls">
+        <button class="steer-button" id="leftButton" type="button" aria-label="Steer left"><span>←</span><small>LEFT</small></button>
+        <div class="control-center"><span class="control-tip">TAP TO STEER</span><button id="pauseButton" class="pause-button" type="button" aria-label="Pause game" disabled><span class="pause-icon">Ⅱ</span><span id="pauseLabel">PAUSE</span></button></div>
+        <button class="steer-button" id="rightButton" type="button" aria-label="Steer right"><span>→</span><small>RIGHT</small></button>
+      </div>
+    </section>
+    <footer class="footer"><span>BUILT FOR THE LONG WAY HOME</span><span class="footer-dot"></span><span>ENDLESS HIGHWAY · 01</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
